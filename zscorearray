@@ -1,0 +1,29 @@
+import numpy as np
+
+def score(arr):
+ arr=arr
+ mean= np.mean(arr)   
+ standard= np.std(arr)
+ threshold = 2
+ outlier = []   
+ 
+ for i in arr:
+        z = (i-mean)/standard
+        print(z)
+        if z > threshold:
+          outlier.append(i)
+ print('outlier in dataset ', outlier)
+ 
+ arr1 = np.where(arr<outlier)
+ 
+ print(arr[arr1]) 
+  
+ c= np.mean(arr[arr1])
+ print(c)
+        
+
+
+
+
+arr=np.array([1,5,8,9,10,12,87])
+score(arr)
