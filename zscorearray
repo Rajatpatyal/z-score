@@ -16,14 +16,16 @@ def score(arr):
  
  arr1 = np.where(arr<outlier)
  
- print(arr[arr1]) 
+ print("Array Without Outlier=",arr[arr1]) 
   
  c= np.mean(arr[arr1])
- print(c)
+ print("New Mean=",c)
         
 
 
 
 
 arr=np.array([1,5,8,9,10,12,87])
+print("Array with Outlier=", arr)
+print("Mean with Outlier=",np.mean(arr))
 score(arr)
